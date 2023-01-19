@@ -1,2 +1,2 @@
-# 2023_React
-Estudo sobre React
+# 2023_React com Vite
+Estudo sobre React com Vite
