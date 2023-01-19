@@ -1,4 +1,5 @@
 import { Header } from './compoments/Header'
+import './global.css';
 
 function App() {
   return (
