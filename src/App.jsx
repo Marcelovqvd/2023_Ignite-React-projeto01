@@ -1,11 +1,9 @@
-import { useState } from 'react'
+import { Header } from './compoments/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <h1>App</h1>
+      <Header />      
     </div>
   )
 }
