@@ -6,16 +6,12 @@ import { Sidebar } from './compoments/Sidebar';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      
       <div className={styles.wrapper}>
         <Sidebar />
-        <main>
-           
-        </main>
       </div>
-    </div>
+    </>
   )
 }
 
