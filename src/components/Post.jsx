@@ -8,9 +8,7 @@ import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post({ author, publishedAt, content }) {
-  const [comments, setComments] = useState([
-    'Post muito bacana, hein?!'
-  ]);
+  const [comments, setComments] = useState([]);
 
   const [newCommentText, setNewCommentText] = useState('');
 
@@ -77,7 +75,7 @@ export function Post({ author, publishedAt, content }) {
 
       <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment key={comment} content={comment} />
+          return <Comment key={comment} content={comment} setComments={setComments} />
         })}
       </div>
     </article>
