@@ -8,7 +8,9 @@ import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post({ author, publishedAt, content }) {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState([
+    'Post muito bacana, hein?!'
+  ]);
 
   const [newCommentText, setNewCommentText] = useState('');
 
@@ -30,6 +32,10 @@ export function Post({ author, publishedAt, content }) {
 
   function handleNewCommentChange() {
     setNewCommentText(event.target.value);
+  }
+
+  function deleteComment(comment) {
+    console.log(`Deletar comentário ${comment}`)
   }
 
   return (
@@ -75,7 +81,13 @@ export function Post({ author, publishedAt, content }) {
 
       <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment key={comment} content={comment} setComments={setComments} />
+          return (
+            <Comment
+              key={comment}
+              content={comment}
+              onDeleteComment={deleteComment}
+            />
+          )
         })}
       </div>
     </article>
