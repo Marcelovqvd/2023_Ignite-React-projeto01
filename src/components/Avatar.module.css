@@ -1,0 +1,16 @@
+.avatarWithBorder {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #00B37E;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 3px;
+}
